@@ -7,7 +7,7 @@ ex = "(1+3)*[14/2]()[{{}}]"
 
 print(re.fullmatch(pattern,ex))
 stack = []
-# data = {"[":0,"(":0,"{":0}
+# data.json = {"[":0,"(":0,"{":0}
 pat_open = "([{"
 pat_close = ")]}"
 flag = True
@@ -15,7 +15,7 @@ for symbol in ex:
     #     открывающая сразу добавляю
     if symbol in pat_open:
         stack.append(symbol)
-        # data[symbol]+=1
+        # data.json[symbol]+=1
     elif symbol in pat_close:
         #  закрывающая
         if len(stack)==0:

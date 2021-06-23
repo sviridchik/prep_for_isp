@@ -37,6 +37,7 @@ print(inst1.age)
 inst1.age *= 2
 print(inst1.age)
 inst2 = Person(12,"TOM")
+print(inst1 is inst2)
 print(inst2.age)
 inst2.age *= 2
 print(inst2.age)

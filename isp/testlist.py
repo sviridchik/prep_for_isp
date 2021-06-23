@@ -20,8 +20,8 @@
 #         r = a[len(a)//2:]
 #     return merge(mergeSort(l),mergeSort(r))
 # #
-# data = [1,9,-4,3,12,89]
-# print(mergeSort(data))
+# data.json = [1,9,-4,3,12,89]
+# print(mergeSort(data.json))
 #
 # # def merge1(a,b):
 # #     i,j,res = 0,0,[]
@@ -43,7 +43,7 @@
 # #         r = a[len(a)//2:]
 # #     return merge1(mergeSort1(l),mergeSort1(r))
 # #
-# # print(mergeSort1(data))
+# # print(mergeSort1(data.json))
 import random
 # def Quicksort(arr):
 #     if len(arr)<=1:
@@ -53,9 +53,9 @@ import random
 #     m = [el for el in arr if el == pivot]
 #     r = [el for el in arr if el >pivot]
 #     return Quicksort(l)+m+Quicksort(r)
-# data = [-2,9,3,1,-98,43]
+# data.json = [-2,9,3,1,-98,43]
 #
-# # print(Quicksort(data))
+# # print(Quicksort(data.json))
 # def QuickSort(a):
 #     if len(a)<=1:
 #         return a
@@ -73,15 +73,15 @@ import random
 #     #         m.append(el)
 #     return QuickSort(l)+m+QuickSort(r)
 #
-# data = [1,9,-4,3,12,89]
-# print(QuickSort(data)
+# data.json = [1,9,-4,3,12,89]
+# print(QuickSort(data.json)
 
 # a = [0,9,-2,8]
 # b = [3,4,2]
 # print(list(map(lambda x,y:x+y,a,b)))
 # from collections import deque
 #
-# data = [[1,0,0,1,0,1],
+# data.json = [[1,0,0,1,0,1],
 #         [0,1,1,0,0,0],
 #         [1,1,0,0,0,0],
 #         [0,0,0,1,1,0],
@@ -93,22 +93,22 @@ import random
 #
 # for i in range(n):
 #     for j in range(m):
-#         if data[i][j] == 1 and (i,j) not in data_info:
+#         if data.json[i][j] == 1 and (i,j) not in data_info:
 #             orders = deque()
 #             orders.append((i,j))
 #             data_info.add((i,j))
 #             while len(orders)>0:
 #                 l = orders.popleft()
-#                 if l[0]+1<n and data[l[0]+1][l[1]] == 1 and (l[0]+1,l[1]) not in data_info:
+#                 if l[0]+1<n and data.json[l[0]+1][l[1]] == 1 and (l[0]+1,l[1]) not in data_info:
 #                     orders.append((l[0]+1,l[1]))
 #                     data_info.add((l[0]+1,l[1]))
-#                 if 0 <= l[0] - 1 < n and data[l[0] - 1][l[1]] == 1 and (l[0] - 1, l[1]) not in data_info:
+#                 if 0 <= l[0] - 1 < n and data.json[l[0] - 1][l[1]] == 1 and (l[0] - 1, l[1]) not in data_info:
 #                     orders.append((l[0] - 1, l[1]))
 #                     data_info.add((l[0] - 1, l[1]))
-#                 if 0 <= l[1] - 1 < m and data[l[0]][l[1] - 1] == 1 and (l[0], l[1] - 1) not in data_info:
+#                 if 0 <= l[1] - 1 < m and data.json[l[0]][l[1] - 1] == 1 and (l[0], l[1] - 1) not in data_info:
 #                     orders.append((l[0], l[1] - 1))
 #                     data_info.add((l[0], l[1] - 1))
-#                 if 0 <= l[1] + 1 < m and data[l[0]][l[1] + 1] == 1 and (l[0], l[1] + 1) not in data_info:
+#                 if 0 <= l[1] + 1 < m and data.json[l[0]][l[1] + 1] == 1 and (l[0], l[1] + 1) not in data_info:
 #                     orders.append((l[0], l[1] + 1))
 #                     data_info.add((l[0], l[1] + 1))
 #             count+=1
@@ -116,67 +116,67 @@ import random
 
 
 # class Siglton_meta(type):
-#     data = {}
+#     data.json = {}
 #     def __call__(cls, *args, **kwargs):
 #         name = cls.__name__
 #
-#         if cls.__name__ in Siglton_meta.data:
-#             att = (Siglton_meta.data[name].age,Siglton_meta.data[name].name)
+#         if cls.__name__ in Siglton_meta.data.json:
+#             att = (Siglton_meta.data.json[name].age,Siglton_meta.data.json[name].name)
 #             # print(att)
-#             print("я знаю ты тут есть", Siglton_meta.data[name])
+#             print("я знаю ты тут есть", Siglton_meta.data.json[name])
 #             if att == args:
 #                 print("absolutely")
 #
-#             Siglton_meta.data[name].__init__(*args, **kwargs)
-#             return Siglton_meta.data[name]
+#             Siglton_meta.data.json[name].__init__(*args, **kwargs)
+#             return Siglton_meta.data.json[name]
 #         else:
-#             Siglton_meta.data[name]=super().__call__(*args,**kwargs)
-#             return Siglton_meta.data[name]
+#             Siglton_meta.data.json[name]=super().__call__(*args,**kwargs)
+#             return Siglton_meta.data.json[name]
 #
 # # class S(type):
-# #     data = {}
+# #     data.json = {}
 # #
 # #     def __call__(cls, *args, **kwargs):
 # #         name = cls.__name__
-# #         if name in S.data:
-# #             print("я знаю ты тут есть", Siglton_meta.data[name])
-# #             if S.data[name][0] == args and S.data[name][1] == kwargs:
+# #         if name in S.data.json:
+# #             print("я знаю ты тут есть", Siglton_meta.data.json[name])
+# #             if S.data.json[name][0] == args and S.data.json[name][1] == kwargs:
 # #                 print("absolutely")
-# #                 return S.data[name][-1]
+# #                 return S.data.json[name][-1]
 # #             else:
-# #                 S.data[name][0] = args
-# #                 S.data[name][1] = kwargs
-# #                 S.data[name][-1].__init__(*args, **kwargs)
-# #                 return S.data[name][-1]
+# #                 S.data.json[name][0] = args
+# #                 S.data.json[name][1] = kwargs
+# #                 S.data.json[name][-1].__init__(*args, **kwargs)
+# #                 return S.data.json[name][-1]
 # #         else:
 # #             res = [args,kwargs]
 # #             l = super().__call__(*args, **kwargs)
 # #             res.append(l)
-# #             S.data[name]=res
-# #             return S.data[name][-1]
+# #             S.data.json[name]=res
+# #             return S.data.json[name][-1]
 #
 # class S(type):
-#     data = {}
+#     data.json = {}
 #
 #     def __call__(cls, *args, **kwargs):
 #         name = cls.__name__
 #         print(args,kwargs)
-#         if name in S.data:
-#             print("я знаю ты тут есть", S.data[name])
-#             attr = (S.data[name].age,S.data[name].name)
+#         if name in S.data.json:
+#             print("я знаю ты тут есть", S.data.json[name])
+#             attr = (S.data.json[name].age,S.data.json[name].name)
 #             print(attr,"l")
 #             if attr == args:
 #                 print("absolutely")
-#             return S.data[name]
+#             return S.data.json[name]
 #             # else:
-#             #     S.data[name].__init__(*args, **kwargs)
-#             #     return S.data[name]
+#             #     S.data.json[name].__init__(*args, **kwargs)
+#             #     return S.data.json[name]
 #         else:
 #             # res = [args,kwargs]
 #             l = super().__call__(*args, **kwargs)
 #             # resappend(l)
-#             S.data[name]=l
-#             return S.data[name]
+#             S.data.json[name]=l
+#             return S.data.json[name]
 #
 # class Person(metaclass=S):
 #     def __init__(self,age,name):
@@ -215,8 +215,8 @@ import random
 #     r = a[len(a)//2:]
 #     return merge(sort(l),sort(r))
 #
-# data = [-2,9,3,1,-98,43]
-# print(sort(data))
+# data.json = [-2,9,3,1,-98,43]
+# print(sort(data.json))
 
 def Quicksort(a):
     if len(a)<=1:

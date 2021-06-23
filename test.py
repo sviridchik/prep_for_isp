@@ -6,12 +6,12 @@
 # name = "1.json"
 # def decor(cl):
 #     with open(name,"r") as f:
-#         data = eval(f.read())
+#         data.json = eval(f.read())
 #
 #     class Res (cl):
 #         def __init__(self,*args,**kwargs):
 #             super(Res, self).__init__(*args,**kwargs)
-#             for k,v in data.items():
+#             for k,v in data.json.items():
 #                 setattr(Res,k,v)
 #
 #

@@ -10,7 +10,7 @@ def decor(cl):
         data = eval(data1)
 
 
-    # cl.__init__(self,data) 
+    # cl.__init__(self,data.json)
     class Res(cl):
         def __init__(self,*args,**kwargs):
             super(Res, self).__init__(*args,**kwargs)

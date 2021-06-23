@@ -1,6 +1,6 @@
 import re
 data = "0.123"
-# data = "vic123@mail.com"
+# data.json = "vic123@mail.com"
 data1 = "https://example.com:8000/path/to/myfile.html?key1=value1&key2=value2"
 
 def cheker(data:str)->None:

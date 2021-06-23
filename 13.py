@@ -54,7 +54,7 @@ def mergeSort(a):
         r = a[len(a)//2:]
     return merge(mergeSort(l),mergeSort(r))
 
-# print(mergeSort(data))
+# print(mergeSort(data.json))
 
 
 # 3 radix
@@ -71,4 +71,4 @@ def radix(a):
             a = a + b[k]
     print(a)
 
-# radix(data)
+# radix(data.json)

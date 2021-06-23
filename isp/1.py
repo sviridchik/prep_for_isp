@@ -22,7 +22,7 @@ def cnk(n,k):
     for el in r:
         yield el
 
-# data = [1,2,3]
+# data.json = [1,2,3]
 for e in cnk(6,3):
     print(e)
 
