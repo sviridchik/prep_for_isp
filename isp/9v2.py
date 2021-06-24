@@ -1,4 +1,6 @@
 import collections
+
+
 class Node:
     def __init__(self, value=0, left=None, right=None):
         self.value = value
@@ -47,41 +49,29 @@ class Tree():
         if node is None:
             return
         print(node.value)
-        # h += 1
-        l,r=0,0
+        l, r = 0, 0
         if node.left is not None:
             l = self.debth(node.left)
 
-
         if node.right is not None:
             r = self.debth(node.right)
-        return max(l,r)+1
-        #
-        # if not (node.right or node.left):
-        #     if h > Tree.res:
-        #         Tree.res = h
+        return max(l, r) + 1
+
 
     def bfs(self):
         ch = 1
         orders = collections.deque()
-        orders.append((self.root,ch))
-        #cur = self.root
-        while len(orders)>0:
-            l,ch = orders.popleft()
+        orders.append((self.root, ch))
+        # cur = self.root
+        while len(orders) > 0:
+            l, ch = orders.popleft()
             print(l.value)
 
-            # ch=orders[0][1]
-
             if l.left is not None:
-                orders.append((l.left,ch+1))
-
+                orders.append((l.left, ch + 1))
             if l.right is not None:
-                orders.append((l.right,ch+1))
-
-
-            # if len(orders)>0:
-            #     l = orders[0][0]
-        print("h = ",ch)
+                orders.append((l.right, ch + 1))
+        print("h = ", ch)
 
 
 t = Tree()

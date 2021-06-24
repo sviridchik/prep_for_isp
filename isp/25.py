@@ -21,9 +21,10 @@ class Tree:
             r = Tree(self.root.right)
             for el in r:
                 yield el
-
+    #
     # def __next__(self):
-
+    #
+    #     return
 # uu = hren_ustala_zadolbalo1(tree[0])
 # for u in uu:
 #     print(u.value)
